@@ -1,0 +1,21 @@
+.custom-button {
+    width: 107%;
+    height: 40px;
+    background-color: var(--sky-light-blue);
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-button:hover {
+    background-color: var(--sky-dark-blue);
+  }
+  
+  .custom-button:disabled {
+    background-color: #b3c7ff;
+    cursor: not-allowed;
+  }
+  

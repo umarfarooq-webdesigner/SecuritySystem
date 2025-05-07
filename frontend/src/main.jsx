@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import LandingPage from './LandingPage';
-
+import MainApp from './MainApp';
 
 function App() {
   const [message, setMessage] = React.useState('');
@@ -13,11 +12,10 @@ function App() {
   }, []);
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-      <LandingPage />
-      <h1>Hello from React + Vite!</h1>
-      <p>Message from backend: {message}</p>
-    </div>
+    <>
+    <MainApp />
+    </>
+    
   );
 }
 

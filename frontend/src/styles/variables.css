@@ -1,0 +1,32 @@
+:root {
+/* navbar root */
+    --navbar-bg: #d6b5ff;
+    --navbar-text-color: #222;
+    --navbar-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  
+/* landing page root */
+ --main-bg-color: #000;
+  --text-color: #fff;
+  --navbar-bg-color: #d8b4fe;
+  --navbar-text-color: #000;
+  --hover-border-color: red;
+  --white: #fff;
+  --special-font: 'Roboto Slab', serif; /* Special font for SMART ENTRANCE */
+
+/* security staff login page root*/
+--light-purple: #d5bfff;
+--sky-light-blue: #3366ff;
+--sky-dark-blue: #1e40ff;
+--error-red: #ff4d4f;
+--input-border: #cccccc;
+--input-border-error: var(--error-red);
+
+
+
+
+
+
+
+
+
+}
