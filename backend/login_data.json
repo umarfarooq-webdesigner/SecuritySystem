@@ -1,0 +1,45 @@
+[
+    {
+      "userid": "STAFF00901",
+      "password": "12345",
+      "role": "Security Staff",
+      "status": "unlocked",
+      "username": "Umar Farooq"
+    },
+    {
+      "userid": "STAFF00903",
+      "password": "12346",
+      "role": "Security Staff",
+      "status": "locked",
+      "username": "Humair Nasir"
+    },
+    {
+      "userid": "STAFF00905",
+      "password": "12347",
+      "role": "Security Staff",
+      "status": "unlocked",
+      "username": "Abubakar Siddique"
+    },
+    {
+      "userid": "STAFF00907",
+      "password": "12348",
+      "role": "Security Staff",
+      "status": "locked",
+      "username": "Shahwaiz Ahmad"
+    },
+    {
+      "userid": "STAFF00909",
+      "password": "12349",
+      "role": "Security Staff",
+      "status": "unlocked",
+      "username": "Dowood Yousaf"
+    },
+    {
+      "userid": "STAFF00911",
+      "password": "12350",
+      "role": "Security Staff",
+      "status": "locked",
+      "username": "Ibrar Yousaf"
+    }
+  ]
+  

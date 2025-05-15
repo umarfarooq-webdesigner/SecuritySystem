@@ -1,0 +1,38 @@
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.refresh-button {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #0f172a;
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+  animation: float 1.5s ease-in-out infinite;
+
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.refresh-button:hover {
+  background-color: #38bdf8;
+  color: #0f172a;
+  transform: rotate(90deg) scale(1.1);
+}

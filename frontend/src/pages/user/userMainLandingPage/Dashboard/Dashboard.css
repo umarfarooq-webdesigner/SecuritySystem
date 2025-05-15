@@ -1,0 +1,17 @@
+.dashboard-container {
+  padding: 30px;
+  background-color: #f4f6fa;
+  min-height: 100vh;
+}
+
+.dashboard-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}

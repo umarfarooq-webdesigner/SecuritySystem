@@ -1,0 +1,284 @@
+.diary-container {
+  background-color: #e6f7f8;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  color: #00393d;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.diary-scroll-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  height: 100vh;
+  width: 100vw; /* ✨ ensures scrollbar appears full-width on right */
+  box-sizing: border-box;
+}
+
+
+.diary-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 10vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.diary-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.add-button-container {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-add {
+  background-color: #2e7d32; /* Green */
+  color: white;
+}
+
+.btn-add:hover {
+  background-color: #1b5e20;
+}
+
+.btn-cancel {
+  background-color: #d32f2f; /* Red */
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #9a0007;
+}
+
+.btn-delete {
+  background-color: #b00020;
+  color: white;
+}
+
+.btn:hover,
+.btn-icon:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
+.animated {
+  transition: all 0.2s ease-in-out;
+}
+
+.note-form {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  /* Remove any overflow: scroll or height if present */
+}
+
+.note-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+   overflow: visible;
+}
+
+.note-checkbox {
+  margin-right: 0.5rem;
+}
+
+.note-content {
+  flex: 1;
+}
+
+.note-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.note-text {
+  margin-top: 0.3rem;
+  color: #444;
+}
+
+.note-timestamp {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+.note-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-icon {
+  background: #006977;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-icon-danger {
+  background-color: #b00020;
+}
+
+
+/*__________ Dark theme ___________________*/
+/* Dark theme overrides */
+body.dark-theme .diary-container {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-theme .diary-title {
+  color: #f1f1f1;
+}
+
+body.dark-theme .note-form,
+body.dark-theme .note-card {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .input,
+body.dark-theme .textarea {
+  background-color: #2c2c2c;
+  color: #eee;
+  border: 1px solid #444;
+}
+
+body.dark-theme .btn-add {
+  background-color: #2e7d32;
+}
+
+body.dark-theme .btn-add:hover {
+  background-color: #1b5e20;
+}
+
+body.dark-theme .btn-cancel {
+  background-color: #d32f2f;
+  color: white;
+}
+
+body.dark-theme .btn-cancel:hover {
+  background-color: #9a0007;
+}
+
+body.dark-theme .btn-delete {
+  background-color: #e53935;
+  color: white;
+}
+
+body.dark-theme .btn-icon {
+  background-color: #006977;
+}
+
+body.dark-theme .btn-icon-danger {
+  background-color: #e53935;
+}
+
+body.dark-theme .note-title {
+  color: #fff;
+}
+
+body.dark-theme .note-text {
+  color: #ccc;
+}
+
+body.dark-theme .note-timestamp {
+  color: #999;
+}
+
+body.dark-theme .LinksNavbar__button {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #eee;
+}
+
+body.dark-theme .btn:hover,
+body.dark-theme .btn-icon:hover {
+  transform: scale(1.08);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* for scroll bar */
+.diary-scroll-wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+
+.diary-scroll-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.diary-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+.diary-scroll-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body.dark-theme .diary-scroll-wrapper::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+body.dark-theme .diary-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: #444;
+}

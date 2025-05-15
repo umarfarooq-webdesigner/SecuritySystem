@@ -1,0 +1,45 @@
+/* EntryLogList.css */
+
+.entry-log-container {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #1f1d30;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.entry-log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.entry-log-title {
+  font-size: 20px;
+  margin: 0;
+}
+
+.clear-all-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.clear-all-btn:hover {
+  background-color: #c82333;
+}
+
+.entry-log-error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.entry-log-empty {
+  color: #ccc;
+}

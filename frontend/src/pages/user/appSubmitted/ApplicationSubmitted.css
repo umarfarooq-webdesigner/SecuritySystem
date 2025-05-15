@@ -1,0 +1,43 @@
+:root {
+    --submitted: #28a745; /* Example green color */
+    --submitted-text: #ffffff;
+    --submitted-hover: #218838;
+  }
+  
+  .submitted-container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .submitted-message {
+    font-size: 28px;
+    color: black;
+    margin-bottom: 30px;
+  }
+  
+  .submitted-highlight {
+    font-weight: bold;
+    color: var(--submitted);
+}
+  
+  .custom-submitted-btn {
+    background-color: var(--submitted);
+    color: var(--submitted-text);
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 300px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-submitted-btn:hover {
+    background-color: var(--submitted-hover);
+  }
+  

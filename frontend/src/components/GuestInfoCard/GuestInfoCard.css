@@ -1,0 +1,62 @@
+.guestinfo-card {
+  background: linear-gradient(135deg, #e0f7fa, #f1fcff);
+  border-left: 5px solid #006977;
+  border-radius: 20px;
+  padding: 24px;
+  margin: 16px;
+  box-shadow: 0 6px 20px rgba(0, 105, 119, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: slideFadeIn 0.7s ease-out;
+  width: 100%;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  position: relative;
+}
+
+.guestinfo-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 105, 119, 0.4);
+  background: linear-gradient(135deg, #d4f3f7, #e8fcff);
+}
+
+.guestinfo-header h3 {
+  color: #006977;
+  font-size: 22px;
+  margin-bottom: 16px;
+  font-weight: 700;
+  border-bottom: 2px solid #006977;
+  padding-bottom: 4px;
+}
+
+.guestinfo-content p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #003b42;
+}
+
+.guestinfo-content span {
+  font-weight: 600;
+  color: #004c55;
+}
+
+/* Animation keyframe */
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive layout */
+@media (min-width: 992px) {
+  .guestinfo-card {
+    width: calc(50% - 32px);
+    max-width: calc(50% - 32px);
+  }
+}

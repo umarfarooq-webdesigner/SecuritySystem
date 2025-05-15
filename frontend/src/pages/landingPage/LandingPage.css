@@ -1,9 +1,9 @@
-/* Define all variables in root */
-a{
+/* Remove underline from links */
+a {
   text-decoration: none;
 }
 
-/* Page styling */
+/* Page container */
 .smart-entrance-page {
   height: 100vh;
   background-color: var(--main-bg-color);
@@ -13,35 +13,44 @@ a{
   flex-direction: column;
 }
 
-
+/* Main content with darkened background image */
 .main-content {
   flex: 1;
   text-align: center;
   padding: 5rem 1rem;
-  /* background-image: url('https://picsum.photos/seed/background/1200/800'); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../assets/images/landing_page_bg_wallpaper.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-blend-mode: darken;
 }
 
+/* Subtitle text */
 .subtitle {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 300;
+  color: #ffffff;
 }
 
-.title {
+/* Main title text with blinking color animation */
+.title_text {
   font-size: 3rem;
   font-weight: 800;
   margin-top: 0.5rem;
-  font-family: var(--special-font); /* Apply special font only here */
+  font-family: var(--special-font);
+  animation: blinkColor 1s infinite alternate;
 }
 
+/* Description below title */
 .description {
+  margin-top: -20px;
   font-size: 1.25rem;
   font-weight: 300;
-  margin-top: 0.25rem;
+  color: #ffffff;
 }
 
+/* Container for role buttons */
 .role-buttons {
   display: flex;
   justify-content: center;
@@ -50,34 +59,58 @@ a{
   flex-wrap: wrap;
 }
 
+/* Individual role button */
 .role-button {
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease;
-  color: var(--white);
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .role-button:hover {
   transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 105, 119, 0.6);
 }
 
-.role-image {
-  width: 8rem;
-  height: 8rem;
+/* Icon in circle */
+.role-icon {
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
-  border: 4px solid var(--text-color);
-  object-fit: cover;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+  transition: background-color 0.3s ease;
 }
 
-.role-image:hover {
-  border: 4px solid var(--hover-border-color);
+.role-button:hover .role-icon {
+  background-color: #006977;
 }
 
+/* Label under icon circle */
 .role-label {
   margin-top: 1rem;
   font-size: 1.25rem;
   font-weight: bold;
+  color: #ffffff;
+}
+
+/* Animation keyframes for blinking title text */
+@keyframes blinkColor {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #006977;
+  }
 }

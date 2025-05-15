@@ -1,0 +1,12 @@
+    [
+        {
+        "_id": { "$oid": "681bddf8e6ade28c2f49f479" },
+        "username": "STAFF00901",
+        "password": "12345",
+        "role": "Security Staff",
+        "status": "unlocked",
+        "name": "Umar Farooq",
+        "loginAttempts": 0
+        }
+    ]
+    

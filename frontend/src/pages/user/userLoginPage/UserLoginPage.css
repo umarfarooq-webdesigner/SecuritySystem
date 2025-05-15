@@ -1,0 +1,130 @@
+:root {
+  --userLoginPrimary: #006977;
+  --userLoginText: #ffffff;
+  --userLoginBorder: #000000;
+  --userLoginBorderSuccess: #00b300;
+  --userLoginBorderError: #ff4d4d;
+  --userLoginBackground: #f0f9fa;
+  --userLoginErrorText: #ff4d4d;
+  --iconBackground: #ffffff;
+}
+
+.userlogin-container {
+  max-width: 400px;
+  margin: 100px auto;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--userLoginBackground);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  animation: slideFadeIn 0.8s ease-out;
+  transition: all 0.3s ease;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--userLoginPrimary);
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--userLoginBorder);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-size: 15px;
+}
+
+.input-field.error {
+  border-color: var(--userLoginBorderError);
+}
+
+.input-field.success {
+  border-color: var(--userLoginBorderSuccess);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--userLoginPrimary);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.eye-icon:hover {
+  color: #004d5e; /* Darker version of #006977 */
+  transform: translateY(-50%) scale(1.1); /* Slight zoom effect, maintains position */
+}
+
+
+.userlogin-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--userLoginPrimary);
+  color: var(--userLoginText);
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.userlogin-button:hover {
+  background-color: #00505c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.login-error-message {
+  margin-top: 10px;
+  color: var(--userLoginErrorText);
+  text-align: center;
+  font-size: 14px;
+}
+
+.alert-overlay {
+  animation: fadeSlide 0.5s ease-out;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

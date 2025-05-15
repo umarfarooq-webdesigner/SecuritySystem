@@ -1,0 +1,50 @@
+/* Center the container */
+.manual-list-container {
+  padding: 20px;
+  background-color: #c1c1c1;
+  margin-top: 15px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+body.dark-theme .manual-list-container {
+  background-color: #1c1c1c;
+}
+
+/* Header flex layout (for refresh button position) */
+.manual-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Style and center the title */
+.manual-title {
+  color: black;
+  font-size: 1.8rem;
+  font-weight: bold;
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+}
+
+body.dark-theme .manual-title {
+  color: white;
+}
+
+/* Other styles */
+.manual-error {
+  color: red;
+  font-weight: bold;
+}
+
+.manual-empty {
+  color: #cbd5e1;
+  font-style: italic;
+}

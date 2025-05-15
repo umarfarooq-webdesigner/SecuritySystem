@@ -1,0 +1,122 @@
+
+:root {
+  --SideNav-bg: linear-gradient(180deg, #1f1f2e, #2e2e3e);
+  --SideNav-hover-bg: #006977;
+  --SideNav-text: #e0e0e0;
+  --SideNav-hover-text: #ffffff;
+  --SideNav-hover-bar: #006977;
+  --SideNav-font-size: 14px;
+  --SideNav-font-weight: normal;
+  --SideNav-hover-font-weight: bold;
+  --SideNav-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.dark-theme {
+  --SideNav-bg: linear-gradient(180deg, #121212, #2b2b2b);
+  --SideNav-text: #f5f5f5;
+  --SideNav-hover-bg: #006977;
+  --SideNav-hover-text: #ffffff;
+  --SideNav-hover-bar: #006977;
+}
+
+.side-navbar {
+  position: fixed;
+  top: 120px;
+  left: 0;
+  z-index: 998;
+  background: var(--SideNav-bg);
+  width: 220px;
+  height: calc(100vh - 120px);
+  padding: 30px 0 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: var(--SideNav-font-family);
+  transition: background 0.3s ease;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.nav-link {
+  position: relative;
+  color: var(--SideNav-text);
+  padding: 10px 18px;
+  text-decoration: none;
+  font-size: var(--SideNav-font-size);
+  font-weight: var(--SideNav-font-weight);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: 3px solid transparent;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--SideNav-hover-bar);
+  transition: left 0.3s ease;
+  z-index: 0;
+}
+
+.nav-link:hover::before {
+  left: 0;
+}
+
+.nav-link:hover {
+  color: var(--SideNav-hover-text);
+  font-weight: var(--SideNav-hover-font-weight);
+  background-color: rgba(0, 188, 212, 0.2);
+  border-left: 3px solid var(--SideNav-hover-text);
+}
+
+.nav-link span {
+  position: relative;
+  z-index: 1;
+}
+
+.nav-link.active {
+  background-color: var(--SideNav-hover-bg);
+  color: var(--SideNav-hover-text);
+  font-weight: var(--SideNav-hover-font-weight);
+  border-left: 3px solid var(--SideNav-hover-text);
+}
+
+.theme-toggle {
+  margin-top: auto;
+  padding: 14px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--SideNav-text);
+  transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--SideNav-hover-text);
+}
+
+
+/* Footer inside sidebar */
+.side-footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--SideNav-text);
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.side-footer:hover {
+  opacity: 1;
+  color: var(--SideNav-hover-text);
+    cursor: pointer;
+}
+

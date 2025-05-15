@@ -1,0 +1,47 @@
+:root {
+    --LockedSysApp-border: #b0c4de;
+    --LockedSysApp-error: #ff4d4f;
+    --LockedSysApp-required: #e60000;
+    --LockedSysApp-bg: #ffffff;
+    --LockedSysApp-inputText: #000;
+    --LockedSysApp-submit: #1dbfe6;
+    --LockedSysApp-submitHover: #119dc2;
+  }
+  
+  .LockedSysApp-container {
+    padding: 40px;
+    max-width: 600px;
+    margin: 2% auto;
+    background-color: var(--LockedSysApp-bg);
+  }
+  
+  .LockedSysApp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .LockedSysApp-field {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .LockedSysApp-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--LockedSysApp-border);
+    border-radius: 5px;
+    color: var(--LockedSysApp-inputText);
+  }
+  
+  .LockedSysApp-required {
+    color: var(--LockedSysApp-required);
+    margin-left: 5px;
+  }
+  
+  .LockedSysApp-error {
+    color: var(--LockedSysApp-error);
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  

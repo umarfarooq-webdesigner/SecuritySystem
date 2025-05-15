@@ -1,0 +1,118 @@
+:root {
+  --granted-bg: #0d1b2a;
+  --granted-border: #28a745;
+  --granted-color: #28a745;
+
+  --denied-bg: #0d1b2a;
+  --denied-border: #dc3545;
+  --denied-color: #dc3545;
+
+  --text-color: #ffffff;
+  --font-family: 'Segoe UI', sans-serif;
+}
+
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--granted-bg);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  border-radius: 10px;
+  padding: 14px 24px;
+  margin: 20px auto;
+  border: 1.5px solid;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  animation: fadeInScale 0.5s ease-in-out;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.user-card.granted {
+  border-color: var(--granted-border);
+}
+
+.user-card.denied {
+  border-color: var(--denied-border);
+}
+
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.user-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #444;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #f1f1f1;
+}
+
+.user-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.user-id,
+.user-role {
+  font-size: 14px;
+}
+
+.user-timestamp {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+.right-icon {
+  margin-left: auto;
+  padding-left: 20px;
+}
+
+.status-icon {
+  font-size: 28px;
+}
+
+.status-icon.granted {
+  color: var(--granted-color);
+}
+
+.status-icon.denied {
+  color: var(--denied-color);
+}
+

@@ -1,0 +1,74 @@
+:root {
+  --LinksNavbar-bg: linear-gradient(90deg, #0f2027, #203a43, #2c5364); /* deep blue gradient */
+  --LinksNavbar-btn-default: rgba(255, 255, 255, 0.1);
+  --LinksNavbar-btn-hover: rgba(0, 174, 255, 0.2);
+  --LinksNavbar-btn-active: #00bcd4;
+  --LinksNavbar-btn-text: #ffffff;
+  --LinksNavbar-btn-hover-text: #ffffff;
+  --LinksNavbar-btn-active-text: #ffffff;
+}
+
+.LinksNavbar__container {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  background: var(--LinksNavbar-bg);
+  padding: 15px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.LinksNavbar__left,
+.LinksNavbar__right {
+  display: flex;
+  gap: 16px;
+}
+
+.LinksNavbar__button {
+  background-color: var(--LinksNavbar-btn-default);
+  color: var(--LinksNavbar-btn-text);
+  padding: 10px 18px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(6px);
+}
+
+.LinksNavbar__button:hover {
+  background-color: var(--LinksNavbar-btn-hover);
+  color: var(--LinksNavbar-btn-hover-text);
+  transform: translateY(-1px);
+  border-color: #00bcd4;
+  box-shadow: 0 8px 16px rgba(0, 188, 212, 0.3);
+}
+
+.LinksNavbar__button--active {
+  background-color: var(--LinksNavbar-btn-active);
+  color: var(--LinksNavbar-btn-active-text);
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.6);
+  border-color: #ffffff;
+}
+
+.LinksNavbar__icon {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.LinksNavbar__theme-toggle {
+  width: 44px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  justify-content: center;
+}

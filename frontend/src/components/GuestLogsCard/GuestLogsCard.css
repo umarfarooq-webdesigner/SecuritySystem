@@ -1,0 +1,45 @@
+.guestlog-card {
+  border: 1px solid #006977;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 12px;
+  background-color: #f0fbfd;
+  box-shadow: 0 2px 6px rgba(0, 105, 119, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.guestlog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 105, 119, 0.3);
+  background-color: #e6f9fb;
+}
+
+.guestlog-card p {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #003b42;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Two cards per row only on large screens */
+@media (min-width: 992px) {
+  .guestlog-card {
+    width: calc(50% - 24px);
+    max-width: calc(50% - 24px);
+  }
+}

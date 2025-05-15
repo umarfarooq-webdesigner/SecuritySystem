@@ -1,0 +1,25 @@
+
+  .locked-container {
+    text-align: center;
+    margin-top: 5%;
+    font-family: var(--lockedFont);
+  }
+  
+  .locked-text {
+    font-size: 20px;
+    margin-top: 20px;
+    color: var(--lockedText);
+  }
+  
+  .locked-admin {
+    font-size: 22px;
+    color: var(--lockedBlue);
+    cursor: pointer;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .locked-admin:hover {
+    color: var(--lockedBlueDark);
+  }
+  

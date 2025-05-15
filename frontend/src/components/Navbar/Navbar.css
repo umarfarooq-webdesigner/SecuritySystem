@@ -1,24 +1,47 @@
+:root {
+  --navbar-bg: linear-gradient(90deg, #1e3c72, #2a5298); /* deep blue-purple */
+  --navbar-text-color: #f0f8ff;
+  --navbar-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
 
-  
-  .navbar {
-    background-color: var(--navbar-bg);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    box-shadow: var(--navbar-shadow);
-  }
-  
-  .navbar-logo {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-  }
-  
-  .navbar-title {
-    color: var(--navbar-text-color);
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-shadow: var(--navbar-shadow);
-  }
-  
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--navbar-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 28px;
+  box-shadow: var(--navbar-shadow);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.694);
+  /* Ensure content isn't hidden behind the navbar */
+  top: 0;
+}
+
+.navbar-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.3); /* subtle white glow */
+}
+
+.navbar-title {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  color: var(--navbar-text-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
+}
+
+body {
+  padding-top: 60px;
+}

@@ -1,0 +1,21 @@
+.guestlist-container {
+  padding: 24px;
+}
+
+.guestlist-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.guestlist-title {
+  font-size: 28px;
+  color: #006977;
+}
+
+.guestlist-error,
+.guestlist-empty {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  margin-top: 20px;
+}
